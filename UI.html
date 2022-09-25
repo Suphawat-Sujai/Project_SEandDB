@@ -7,6 +7,44 @@
     <title>คำร้องขอจากลูกค้า</title>
 </head>
 <body>
-    <h1>คำร้องขอจากลูกค้า</h1>
+    <h1 align = "center" >คำร้องขอจากลูกค้า</h1>
+    <hr>
+    <form>
+        <div>
+            <label for = "name"> ชื่อ-นามสกุล</label>
+            <input type="text" placeholder="กรุณากรอกชื่อของท่าน" required>
+        </div>
+
+        <div>
+            <label for = "email"> Email</label>
+            <input type="email" name ="email" placeholder="กรุณากรอก email" required>
+        </div>
+
+        <div>
+            <label for = "number_room"> หมายเลขห้อง</label>
+            <input type="tel" name="number_room" placeholder="กรุณากรอกหมายเลขห้อง" required>
+        </div>
+
+        <div>
+            <label for = "number_date"> วันที่</label>
+            <input type="date" name ="number_date" required>
+        </div>
+
+        <div>
+            <label for = "number_phone"> เบอร์โทรติดต่อ</label>
+            <input type="tel" name ="number_phone" placeholder="กรุณากรอกเบอร์โทรติดต่อ" required>
+        </div>
+
+        <div>
+            <p>ข้อมูลการร้องขอ</p>
+            <textarea name="nomber_room" cols="50" rows="15"></textarea>
+        </div>
+
+        <div>
+            <input type="submit" value="บันทึกข้อมูล">
+        </div>
+
+    </form>
+
 </body>
 </html>
