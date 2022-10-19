@@ -6,11 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <title>คำร้องขอจากลูกค้า</title>
+        <title>CHECK IN</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        
 
 
         <style>
@@ -19,16 +18,16 @@
               border-radius: 0;
             }
             
-            .row.content {height: 550px}
+            .row.content {height: 863px}
             
             .sidenav {
               padding-top: 10px;
-              background-color: #999797;
+              background-color: #4c95da;
               height: 100%;
             }
             
             footer {
-              background-color: #555;
+              background-color: rgb(85, 85, 85);
               color: white;
               padding: 8px;
             }
@@ -36,7 +35,7 @@
             @media screen and (max-width: 767px) {
               .sidenav {
                 height: auto;
-                padding: 15px;
+                padding: 30px;
               }
               .row.content {height:auto;} 
             }
@@ -57,8 +56,10 @@
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
+                        <li><a href="#">History</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Contact</a></li>
+                        
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
@@ -71,276 +72,109 @@
             <div class="row content">
                 <div class="col-sm-2 sidenav">
                     <br>
-                    <button type="button" class="btn btn-success btn-lg">Update room</button>
+                    <br>
+                    <a href="UI_Checkout.html"><button type="button" class="btn btn-success btn-lg">&nbsp;&nbsp;&nbsp;&nbsp;Check out&nbsp;&nbsp;&nbsp;&nbsp;</button></a>
                     <br>
                     <br>
                     <br>
-                    <button type="button" class="btn btn-success btn-lg">Room canxeling</button>
+                    <button type="button" class="btn btn-success btn-lg">&nbsp&nbsp&nbspUpdate room&nbsp&nbsp&nbsp</button>
                     <br>
                     <br>
                     <br>
-                    <button type="button" class="btn btn-success btn-lg">Room booking</button>
+                    <button type="button" class="btn btn-success btn-lg">&nbspRoom canceling&nbsp</button>
                     <br>
                     <br>
                     <br>
-                    <button type="button" class="btn btn-success btn-lg">Payment room</button>
+                    <button type="button" class="btn btn-success btn-lg">&nbsp&nbspRoom booking&nbsp&nbsp</button>
+                    <br>
+                    <br>
+                    <br>
+                    <button type="button" class="btn btn-success btn-lg">&nbsp&nbspPayment room&nbsp&nbsp</button>
                 </div>
-                <div class="col-sm-8 text-left"> 
+                <div class="col-sm-8 text-left">
                     <br>
-                    <h1>หมายเลขห้องพัก</h1>
+                    <h1>CHECK IN</h1>
                     <br>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#myModal" >&nbsp;1201&nbsp;</button>
-                    <div class="modal" id="myModal">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                    
-                          <!-- Modal Header -->
-                          <div class="modal-header">
-                            <h4 class="modal-title">ข้อมูลการร้องขอจากลูกค้า</h4>
-                          </div>
-                    
-                          <!-- Modal body -->
-                          <div class="modal-body">
-                            ข้อมูลภายใน
-                          </div>
-                    
-                          <!-- Modal footer -->
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Submit</button>
-                          </div>
+                    <form class="row g-3 needs-validation" novalidate>
+                        <div class="col-md-4">
+                          <label for="validationCustom01" class="form-label"><h4>ชื่อ - นามสกุล</h4></label>
+                          <input type="text" class="form-control" id="validationCustom01" placeholder="กรุณากรอกชื่อ-นามสกุล" required>
+                          
                         </div>
-                      </div>
-                    </div>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#myModal" >&nbsp;1202&nbsp;</button>
-                    <div class="modal" id="myModal">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                      
-                            <!-- Modal Header -->
-                            <div class="modal-header">
-                              <h4 class="modal-title">ข้อมูลการร้องขอจากลูกค้า</h4>
-                            </div>
-                      
-                            <!-- Modal body -->
-                            <div class="modal-body">
-                              ข้อมูลภายใน
-                            </div>
-                      
-                            <!-- Modal footer -->
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-success" data-bs-dismiss="modal">Submit</button>
-                            </div>
-                          </div>
+                        <div class="col-md-4">
+                          <label for="validationCustom02" class="form-label"><h4>ID/ Passport</h4></label>
+                          <input type="text" class="form-control" id="validationCustom02" placeholder="กรุณากรอก ID/Passport" required>
+                          
                         </div>
-                      </div>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#myModal" >&nbsp;1203&nbsp;</button>
-                    <div class="modal" tabindex="-1">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title">Modal title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            <p>Modal body text goes here.</p>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;1204&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;1205&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;1206&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;1207&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;1208&nbsp;</button>
-                    <br>
-                    &nbsp;
-                    &nbsp;
-                    <br>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;1209&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;1301&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;1302&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;1303&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;1304&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;1305&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;1306&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;1307&nbsp;</button>
-                    <br>
-                    &nbsp;
-                    &nbsp;
-                    <br>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;1308&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;1309&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;1401&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;1402&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;1403&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;1404&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;1405&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;1406&nbsp;</button>
-                    <br>
-                    &nbsp;
-                    &nbsp;
-                    <br>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;1407&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;1408&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;1409&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;1501&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;1502&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;1503&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;1504&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;1505&nbsp;</button>
-                    <br>
-                    &nbsp;
-                    &nbsp;
-                    <br>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;2101&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;2102&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;2103&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;2104&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;2105&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;2106&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;2105&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;2106&nbsp;</button>
-                    <br>
-                    &nbsp;
-                    &nbsp;
-                    <br>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;2107&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;2108&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;2109&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;2201&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;2202&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;2203&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;2204&nbsp;</button>
-                    &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-primary btn-lg">&nbsp;2205&nbsp;</button>
+                        <div class="col-md-4">
+                          <label for="validationCustomUsername" class="form-label"><h4>หมายเลขติดต่อ</h4></label>
+                          <div class="input-group has-validation">
 
-                    <br>
-                    <br>
-                    &nbsp;
-                    &nbsp;
-                    <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                      
-                      <label class="btn btn-warning" for="btncheck1">&nbsp;&nbsp;1&nbsp;&nbsp;</label>
-                      
-                      <label class="btn btn-warning" for="btncheck2"> &nbsp;&nbsp;2&nbsp;&nbsp;</label>
-                      
-                      <label class="btn btn-warning" for="btncheck3"> &nbsp;&nbsp;3&nbsp;&nbsp;</label>
-                    </div>
+                            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="กรุณากรอกหมายเลขโทรศัพท์" required>
+                            
+                          </div>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <div class="col-md-4">
+                          <label for="validationCustom03" class="form-label"><h4>หมายเลขห้องพัก</h4></label>
+                          <input type="text" class="form-control" id="validationCustom03" placeholder="กรุณากรอกหมายเลข" required>
+                        </div>
 
+                        <br>
+                        <br>
+                        <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#myModal" >&nbsp;Search&nbsp;</button>
+                            <div class="modal" id="myModal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                      
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">ตรวจสอบห้องพัก</h4>
+                                        </div>
+                      
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            ว่างหรือไม่ว่าง
+                                        </div>
+                      
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        <br><br><br><br>
+                        <br><br><br><br>
+                        <br><br><br><br>
+                        <br><br><br><br>
+                        <br><br><br><br>
+                        <br><br><br><br>
+                        <br><br>
+                    </form>
+                    <div class="col-sm-8 text-left">
+                        <div class="col-12" align="center" style="margin-top: 5%;">
+                            <button type="button" class="btn btn-success btn-lg" id="submit-checkin" >&nbsp;&nbsp;SUBMIT FOR CHECK OUT&nbsp;&nbsp;</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-sm-2 sidenav">
                     <div class="well">
                         <p>หมายเลขติดต่อหัวหน้า</p>
                         <p>************</p>
                     </div>
-            </div>
+                </div>
         </div>
     </div>
 
     <footer class="container-fluid text-center">
-        <p>NAME HOTEL</p>
+        <p>Hotel_inside_management</p>
     </footer>
 
 
