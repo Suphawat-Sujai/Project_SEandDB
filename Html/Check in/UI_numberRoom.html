@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <title>CHECK IN</title>
+        <title>CHECK OUT</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -22,12 +22,12 @@
             
             .sidenav {
               padding-top: 10px;
-              background-color: #4c95da;
+              background-color: #999797;
               height: 100%;
             }
             
             footer {
-              background-color: rgb(85, 85, 85);
+              background-color: #555;
               color: white;
               padding: 8px;
             }
@@ -56,10 +56,10 @@
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
+                        <a class="navbar-brand" href="#">&nbsp;&nbsp;HOTEL</a>
                         <li><a href="#">History</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Contact</a></li>
-                        
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
@@ -73,52 +73,31 @@
                 <div class="col-sm-2 sidenav">
                     <br>
                     <br>
-                    <a href="UI_Checkout.html"><button type="button" class="btn btn-success btn-lg">&nbsp;&nbsp;&nbsp;&nbsp;Check out&nbsp;&nbsp;&nbsp;&nbsp;</button></a>
+                    <a href="UI_Checkin.html"><button type="button" class="btn btn-success btn-lg">&nbsp;&nbsp;&nbsp;&nbsp;Check in&nbsp;&nbsp;&nbsp;&nbsp;</button></a>
                     <br>
                     <br>
                     <br>
-                    <button type="button" class="btn btn-success btn-lg">&nbsp&nbsp&nbspUpdate room&nbsp&nbsp&nbsp</button>
+                    <button type="button" class="btn btn-success btn-lg">&nbsp;&nbsp;&nbspUpdate room&nbsp&nbsp;&nbsp;</button>
                     <br>
                     <br>
                     <br>
-                    <button type="button" class="btn btn-success btn-lg">&nbspRoom canceling&nbsp</button>
+                    <button type="button" class="btn btn-success btn-lg">&nbsp;Room canceling&nbsp;</button>
                     <br>
                     <br>
                     <br>
-                    <button type="button" class="btn btn-success btn-lg">&nbsp&nbspRoom booking&nbsp&nbsp</button>
+                    <button type="button" class="btn btn-success btn-lg">&nbsp;&nbsp;Room booking&nbsp;&nbsp;</button>
                     <br>
                     <br>
                     <br>
-                    <button type="button" class="btn btn-success btn-lg">&nbsp&nbspPayment room&nbsp&nbsp</button>
+                    <button type="button" class="btn btn-success btn-lg">&nbsp;&nbsp;Payment room&nbsp;&nbsp;</button>
+                    
                 </div>
                 <div class="col-sm-8 text-left">
                     <br>
-                    <h1>CHECK IN</h1>
+                    <h1>CHECK OUT</h1>
                     <br>
                     <form class="row g-3 needs-validation" novalidate>
-                        <div class="col-md-4">
-                          <label for="validationCustom01" class="form-label"><h4>ชื่อ - นามสกุล</h4></label>
-                          <input type="text" class="form-control" id="validationCustom01" placeholder="กรุณากรอกชื่อ-นามสกุล" required>
-                          
-                        </div>
-                        <div class="col-md-4">
-                          <label for="validationCustom02" class="form-label"><h4>ID/ Passport</h4></label>
-                          <input type="text" class="form-control" id="validationCustom02" placeholder="กรุณากรอก ID/Passport" required>
-                          
-                        </div>
-                        <div class="col-md-4">
-                          <label for="validationCustomUsername" class="form-label"><h4>หมายเลขติดต่อ</h4></label>
-                          <div class="input-group has-validation">
-
-                            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="กรุณากรอกหมายเลขโทรศัพท์" required>
-                            
-                          </div>
-                        </div>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
+                        
                         <div class="col-md-4">
                           <label for="validationCustom03" class="form-label"><h4>หมายเลขห้องพัก</h4></label>
                           <input type="text" class="form-control" id="validationCustom03" placeholder="กรุณากรอกหมายเลข" required>
@@ -126,19 +105,23 @@
 
                         <br>
                         <br>
-                        <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#myModal" >&nbsp;Search&nbsp;</button>
+                        <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#myModal" >&nbsp;ค้นหา&nbsp;</button>
                             <div class="modal" id="myModal">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                       
                                         <!-- Modal Header -->
                                         <div class="modal-header">
-                                            <h4 class="modal-title">ตรวจสอบห้องพัก</h4>
+                                            <h4 class="modal-title">-ข้อมูลห้องพัก</h4>
                                         </div>
                       
                                         <!-- Modal body -->
                                         <div class="modal-body">
-                                            ว่างหรือไม่ว่าง
+                                            เเสดงข้อมูล ดังนี้<br>
+                                            -ชื่อ-สกุล<br>
+                                            -ID/Passport<br>
+                                            -เบอร์โทรติดต่อ<br>
+                                            -หมายเลชห้องพัก
                                         </div>
                       
                                         <!-- Modal footer -->
@@ -157,11 +140,41 @@
                         <br><br><br><br>
                         <br><br><br><br>
                         <br><br>
+                        <br><br><br><br>
                     </form>
-                    <div class="col-sm-8 text-left">
-                        <div class="col-12" align="center" style="margin-top: 5%;">
-                            <button type="button" class="btn btn-success btn-lg" id="submit-checkin" >&nbsp;&nbsp;SUBMIT FOR CHECK OUT&nbsp;&nbsp;</button>
-                        </div>
+                    <div class="col-12">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        
+                        <button type="button" class="btn btn-danger btn-lg">&nbsp;SUBMIT FOR CHECK OUT&nbsp;</button>
                     </div>
                 </div>
                 <div class="col-sm-2 sidenav">

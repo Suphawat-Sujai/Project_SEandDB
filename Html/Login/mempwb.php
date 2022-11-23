@@ -1,6 +1,13 @@
-<!doctype html>
+<?php
+session_start();
+$data = array();
+include('connecthotel.php');
+$sql = "SELECT * FROM `Employee` ORDER BY `Level` DESC";
+$query = mysqli_query($conn,$sql);
+?>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +15,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <title>MAIN</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/showemp.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
@@ -153,14 +161,10 @@
               }
             }
           </style>
-
-          
-
     </head>
-    
-    <body>
-        <!-- Hambergure -->
-        <nav class="navbar navbar-inverse">
+<body>
+    <main>
+    <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -173,9 +177,9 @@
                 <div class="collapse navbar-collapse" id="myNavbar">
                      <ul class="nav navbar-nav">
                         <a class="navbar-brand" href="#">&nbsp;&nbsp;HOTEL</a>
-                        <li><a href="#">History</a></li>
+                        <!-- <li><a href="#">History</a></li>
                         <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Contact</a></li> -->
                         
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
@@ -191,7 +195,7 @@
 
         <div id="mySidebar" class="sidebar">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-            <a href="#">Manage Employee</a>
+            <a href="./Login/mempwb.php">Manage Employee</a>
             <br />
             <a href="./Check-in/UI_Checkin.html">Check-in</a>
             <br />
@@ -210,96 +214,73 @@
               <a href="/Html/Update/UI_UP_Suite.html">Suite</a>
             </div>
           </div>
+        <section id="content">  
+            <h1>Manage Employee</h1>          
+            <table >
+                <tr>
+                    <th>ชื่อ</th>
+                    <th>ID/passport</th>
+                    <th>เบอร์โทรติดต่อ</th>
+                    <th>Email</th>
+                    <th>ที่อยู่</th>
+                    <th>Level</th>
+                    <th>Bod</th>
+                    <th>จัดการ</th>
+                </tr>
+                <?php
+                    $j = 0;
+                    while($record=mysqli_fetch_row($query)){
+                        $people = array();
         
-        <!-- Content -->
-        <div class="container-fluid text-center">    
-            <div class="row content">
-                <!-- <div class="col-sm-2 sidenav">
-                    <br>
-                    <br>
-                    <a href="UI_Checkout.html"><button type="button" class="btn btn-success btn-lg">&nbsp;&nbsp;&nbsp;&nbsp;Check out&nbsp;&nbsp;&nbsp;&nbsp;</button></a>
-                    <br>
-                    <br>
-                    <br>
-                    <button type="button" class="btn btn-success btn-lg">&nbsp&nbsp&nbspUpdate room&nbsp&nbsp&nbsp</button>
-                    <br>
-                    <br>
-                    <br>
-                    <button type="button" class="btn btn-success btn-lg">&nbspRoom canceling&nbsp</button>
-                    <br>
-                    <br>
-                    <br>
-                    <button type="button" class="btn btn-success btn-lg">&nbsp&nbspRoom booking&nbsp&nbsp</button>
-                    <br>
-                    <br>
-                    <br>
-                    <button type="button" class="btn btn-success btn-lg">&nbsp&nbspPayment room&nbsp&nbsp</button>
-                    
-                    
-
-                </div> -->
-
-
-
-                <div class="container mt-3">
-                    <br>
-                    <h2>ตารางตรวจสอบห้องพัก</h2>   
-                    <br>         
-                    <table class="table table-bordered">
-                        <thead>
-                        <tr>
-                            <th>Room</th>
-                            <th>State</th>
-                            <th>Price</th>
-                            <th>Facilities</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr  r>
-                            <td>E</td>
-                            <td>I</td>
-                            <td>200</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>102</td>
-                            <td>unavailable</td>
-                            <td>300</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>103</td>
-                            <td>unavailable</td>
-                          <td>500</td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                            <td>104</td>
-                            <td>available</td>
-                            <td>600</td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td>105</td>
-                            <td>available</td>
-                            <td>1000</td>
-                            <td></td>
-                          </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
-                
-                
-            </div>
-        </div>
-
-
-    <footer class="container-fluid text-center">
-        <p>Hotel_inside_management</p>
-    </footer>
-
-    <script
+                        $idpp = $record['0'];
+                        $name = $record['1'];
+                        $tel = $record['2'];
+                        $email = $record['3'];
+                        $address = $record['4'];
+                        $elv = $record['5'];
+                        $bod = $record['6'];
+        
+                        for($i=0;$i<6;$i++){
+                            $people[$i] = $record[$i];
+                        }
+                        $data[$j] = $people;
+                        $tr = "
+                        <td>$name</td>
+                        <td>$idpp</td>
+                        <td>$tel</td>
+                        <td>$email</td>
+                        <td>$address</td>
+                        <td style='text-align:center'>$elv</td>
+                        <td>$bod</td>
+        
+                        <td style='text-align:center'>
+                            <form action='deleteemp.php' method='post'>
+                                <input name='index' value='$j' style='display:none;'>
+                                <button type='submit' style='cursor: pointer;'>ลบ</button>
+                            </form>
+                        </td>";
+                        echo "<tr>$tr</tr>";
+                        $j++;
+                    }
+                ?>
+                <tr>
+                    <td colspan="9">
+                        <a href="pre_reg.php"> + ลงทะเบียนพนักงานเพิ่ม</a>
+                    </td>
+                </tr>
+            </table>
+            <p id="res" style="margin:5px;color:red;">
+                <?php 
+                if(!empty($_SESSION['res'])){
+                    echo $_SESSION['res'];
+                    $_SESSION['res'] = null;
+                }
+                ?>
+            </p>
+        </section>
+    </main>
+</body>
+<script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
     crossorigin="anonymous"
@@ -337,5 +318,10 @@
     }
   </script>
 
-    </body>
 </html>
+</html>
+<?php
+
+
+$_SESSION['people'] = $data;
+?>
