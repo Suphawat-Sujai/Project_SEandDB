@@ -176,15 +176,20 @@
                 <button class="openbtn" onclick="openNav()">&nbsp;&nbsp;☰&nbsp;&nbsp; </button>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
-                <!-- <ul class="nav navbar-nav">
-                        <li><a href="#">History</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                        
-                    </ul> -->
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+                <ul class="nav navbar-nav">
+                    <a class="navbar-brand" href="#">&nbsp;&nbsp;HOTEL</a>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+
                 </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="Payment_status.php">Main</a></li>
+                    <li><a href="insert_receipt.html">Insert</a></li>
+                    <li><a href="Payment_Method.html">Payment Method</a></li>
+                    <li>
+                        <a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a>
+                    </li>
             </div>
         </div>
     </nav>
@@ -196,16 +201,20 @@
         <br />
         <a href="#">Check-in</a>
         <br />
-        <a href="#">Booking/Reserve</a>
+        <a href="#">Check-out</a>
+        <br />
+        <a href="booking.php">Booking/Reserve</a>
+        <br />
+        <a href="#">Cancel room</a>
         <br />
         <button class="dropdown-btn"> &nbsp;&nbsp;&nbsp;Room manage<i class="fa fa-caret-down"></i></button>
         <div class="dropdown-container">
-        <a href="/Html/Update/UI_UP_Basic.html">Basic</a>
-        <a href="/Html/Update/UI_UP_Standard.html">Standard</a>
-        <a href="/Html/Update/UI_UP_superior.html">Superior</a>
-        <a href="/Html/Update/UI_UP_Deluxe.html">Deluxe</a>
-        <a href="/Html/Update/UI_UP_Suite.html">Suite</a>
-      </div>
+            <a href="../Update/UI_UP_Basic.html">Basic</a>
+            <a href="../Update/UI_UP_Standard.html">Standard</a>
+            <a href="../Update/UI_UP_superior.html">Superior</a>
+            <a href="../Update/UI_UP_Deluxe.html">Deluxe</a>
+            <a href="../Update/UI_UP_Suite.html">Suite</a>
+        </div>
     </div>
 
     <!-- Content -->
